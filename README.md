@@ -1,1 +1,1 @@
-# Repository from the Semantic Networks project
+# Repository for the Semantic Networks project
