@@ -1,1 +1,1 @@
-# Graph_Connoiseurs_project
+# Repository fro the Semantic Networks project
