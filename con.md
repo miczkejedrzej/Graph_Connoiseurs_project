@@ -13,7 +13,7 @@ $$
 
 | Model | Val Accuracy| Test Accuracy|
 |-------------|-----------|-----------|
-| **GCN - from paper**              | -   | **70.3**   |
+| **GCN - from paper**              | -   | **0.703**   |
 | GCN - from paper our replication  | 0.718   | 0.691   |
 | GCN - without edges           | 0.572   | 0.571   |
 | Graph Isomorphism Network     | 0.666   | 0.648   |
