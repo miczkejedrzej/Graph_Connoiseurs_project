@@ -129,7 +129,6 @@ $$
 | Graph Attention Network       | 0.748   | **0.728**   |
 | Graph Sample and aggregate    | 0.710   | 0.707   |
 | GraphTransformer              | 0.724   | 0.694   |
-| MLP without edges             | 0.444   | 0.402   |
 
 
 ### Conclusions
