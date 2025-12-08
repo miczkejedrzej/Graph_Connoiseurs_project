@@ -1,0 +1,34 @@
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+\usepackage{amsmath, amssymb}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{titlesec}
+\titleformat{\section}
+  {\large\bfseries}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries}
+  {\thesubsection}{1em}{}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black,
+  citecolor=black
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+
+\usepackage[font=small]{caption}
