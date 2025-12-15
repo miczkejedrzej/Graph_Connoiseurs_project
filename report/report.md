@@ -5,6 +5,12 @@
  - Krzysztof Skrobała 156039
  - Wojciech Bogacz 156034
 
+# Code layout
+ - `src/introductory_notebook.ipynb` contains introduction to the tools
+ - `src/GCN.ipynb` contains the code for reproducing the original experiment
+ - `src/exploratory_analysis.ipynb` contains the code for an exploratory dataset analysis
+ - `src/other_method.ipynb` contains the code for other methods benchmarking
+
 # Introduction
 
 This project aims to test methods for predicting a paper category based on its abstract, and the graph structure of citations between papers. The main idea is to reproduce the results from the paper _Semi-Supervised Classification with Graph Convolutional Networks_ by Thomas N. Kipf and Max Welling, presented at ICLR 2017, and to compare it with other methdods. 
