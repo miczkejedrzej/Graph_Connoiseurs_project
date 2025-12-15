@@ -6,10 +6,12 @@
  - Wojciech Bogacz 156034
 
 # Code layout
- - `src/introductory_notebook.ipynb` contains introduction to the tools
+ - `src/introductory_notebook.ipynb` contains an introduction to the tools
  - `src/GCN.ipynb` contains the code for reproducing the original experiment
  - `src/exploratory_analysis.ipynb` contains the code for an exploratory dataset analysis
  - `src/other_method.ipynb` contains the code for other methods benchmarking
+ - `report/` contains files for creating the report
+ - `compile_report.sh` builds the report into a PDF file
 
 # Introduction
 
