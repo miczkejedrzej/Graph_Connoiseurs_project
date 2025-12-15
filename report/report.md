@@ -167,7 +167,7 @@ $$
 | Model | Val Accuracy| Test Accuracy|
 |-------------|-----------|-----------|
 | GCN - from the original paper              | -   | 0.703   |
-| GCN - the replication  | 0.718   | 0.691   |
+| GCN - the replication  | 0.694   | 0.702   |
 | GCN - without edges           | 0.572   | 0.571   |
 | Graph Isomorphism Network     | 0.666   | 0.648   |
 | Graph Attention Network       | 0.748   | **0.728**   |
