@@ -11,6 +11,13 @@ This project aims to test methods for predicting a paper category based on its a
 
 # Related Work
 
+**Graph attention networks** (Veličković, P., Cucurull, G., Casanova, A., Romero, A., Lio, P., & Bengio, Y. (2017). Graph attention networks. arXiv preprint arXiv:1710.10903.)
+Graph Attention Networks introduce a novel attention formulation of graph convolution that allows each node to learn how much importance to assign to each of its neighbors, rather than aggregating them with fixed weights normalized by degree as in prior GCNs. The key innovation is a masked self-attention mechanism applied locally on graph neighborhoods, which is fully differentiable, parameter efficient, and avoids costly spectral operations such as Laplacian eigendecomposition. This design naturally handles differently sized neighborhoods, supports directed graphs, and does not depend on knowing the full graph structure upfront, making it well suited for inductive learning on unseen graphs. Empirically, GATs consistently outperform or match newest graph convolutional and inductive methods across both transductive citation networks and large-scale inductive benchmarks, demonstrating that learned, data-driven neighbor weighting significantly improves representational power and generalization over uniform or heuristic aggregation schemes.
+
+
+
+**Transformers networks** (Yun, S., Jeong, M., Kim, R., Kang, J., & Kim, H. J. (2019). Graph transformer networks. Advances in neural information processing systems, 32.)
+Graph Transformer Networks address a key limitation of existing graph neural networks by learning the graph structure itself, rather than assuming a fixed, previously specified graph, which is especially problematic in heterogeneous or misspecified graphs. The central novelty is the Graph Transformer layer, which learns a soft, differentiable selection and composition of edge types to automatically generate useful meta-path-based graphs of varying lengths, effectively discovering multi-hop and composite relations directly from data. These learned graph structures are then used for standard graph convolution, and multiple such representations are combined to form powerful node embeddings. Compared to prior methods that rely on manually crafted meta-paths or homogeneous approximations, GTNs achieve brilliant performance on heterogeneous node classification benchmarks, adaptively choose effective relation lengths, and provide interpretable insights through attention weights over learned meta-paths, demonstrating both superior accuracy and structural interpretability.
 # Dataset description
 
 # Methods Decription
