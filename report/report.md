@@ -84,7 +84,7 @@ where:
 - $\|$ indicates concatenation.
 - $\text{AGGREGATE}(\cdot)$ is a differentiable function (e.g., mean, max-pooling, or LSTM).
 
-## Graph Trasnformer
+## Graph Transformer
 
 Graph Transformers adapt the self-attention mechanism of Transformers to graph-structured data, enabling nodes to attend to other nodes based on learned attention scores while incorporating graph structure via positional or edge encodings.
 
@@ -106,6 +106,39 @@ where:
 * $d$ is the attention dimension (used for scaling).
 * $b_{ij}$ is a bias term encoding graph structure (e.g., shortest path distance or edge connectivity).
 * $\mathcal{V}$ is the set of all nodes in the graph.
+
+## Graph Isomorphism Network (GIN)
+
+Graph Isomorphism Networks (GINs) are message-passing graph neural networks designed to maximally preserve graph structural information. 
+For a node $i$, the GIN update rule at layer $k$ is:
+
+$$
+h_i^{(k)} =
+\text{MLP}^{(k)}\left(
+(1 + \epsilon^{(k)}) \cdot h_i^{(k-1)} +
+\sum_{j \in \mathcal{N}(i)} h_j^{(k-1)}
+\right)
+$$
+
+where:
+* $h_i^{(k)}$ denotes the feature representation of node $i$ at layer $k$.
+* $\mathcal{N}(i)$ is the set of neighbors of node $i$.
+* $\epsilon^{(k)}$ is either a fixed scalar or a learnable parameter that controls the weighting of the central node.
+* $\text{MLP}^{(k)}$ is a multilayer perceptron applied after neighborhood aggregation.
+
+To obtain a graph-level representation, node embeddings are aggregated using a permutation-invariant readout function:
+
+$$
+h_G = \text{READOUT}\left( \{ h_i^{(k)} \mid i \in \mathcal{V}, \, k = 1, \dots, K \} \right)
+$$
+
+where:
+* $h_G$ is the graph-level representation.
+* READOUT is typically a sum or concatenation of pooled node features across layers.
+* $\mathcal{V}$ is the set of all nodes in the graph.
+
+The use of sum aggregation ensures injectivity over multisets of neighbor features, allowing GINs to match the expressive power of the 1-WL graph isomorphism test while remaining invariant to node permutations.
+
 
 # Evaluation Strategy
 
